@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="./logo.svg" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"
+    />
+    <script src="pomodoro.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <title>Loading Timer</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div id="time-insert" style="display: none" class="container">
+        <form action="?" method="GET">
+          <div class="input-label">작업 시간</div>
+          <input type="number" name="working" value="25" min="0" id="working" />
+          <div class="input-label">휴식 시간</div>
+          <input type="number" name="pause" value="5" min="0" id="pause" />
+          <div class="input-label">인터벌</div>
+          <div>
+            <button type="button" onclick="setPomodoro(6, 4)">6/4</button>
+            <button type="button" onclick="setPomodoro(25, 5)">25/5</button>
+            <button type="button" onclick="setPomodoro(30, 10)">30/10</button>
+            <button type="button" onclick="setPomodoro(50, 10)">50/10</button>
+          </div>
+          <input type="submit" />
+        </form>
+      </div>
+      <div id="loading-timer" style="display: none" class="container">
+        <div>
+          <div id="now" class="now"></div>
+          <div id="loading-ratio" class="loading-ratio"></div>
+          <div class="loading-background">
+            <div class="loading-bar" id="loading-bar"></div>
+          </div>
+          <div id="time-left" class="time-left"></div>
+          <div><input type="checkbox" id="audio-checkbox" /> Audio</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

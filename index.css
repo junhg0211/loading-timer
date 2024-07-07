@@ -20,23 +20,37 @@ body {
   font-size: 12px;
 }
 
+input[type="submit"] {
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  display: inline;
+}
+
 input {
+  width: calc(100% - 16px - 2px);
   display: block;
+}
+
+input,
+form button {
   margin: 4px 0 12px 0;
   border: 1px solid black;
   padding: 8px;
   border-radius: 8px;
-  width: 100%;
-}
-
-input[type="datetime-local"],
-input[type="text"] {
-  width: calc(100% - 16px - 2px);
+  background-color: white;
 }
 
 .until-label {
   text-align: center;
   margin-bottom: 12px;
+}
+
+.now {
+  text-align: center;
+  margin-bottom: 8px;
 }
 
 .loading-ratio {
