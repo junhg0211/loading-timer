@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  font-family: "Pretendard", monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.main-container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 320px;
+  margin: auto;
+}
+
+.input-label {
+  font-size: 12px;
+}
+
+input {
+  display: block;
+  margin: 4px 0 12px 0;
+  border: 1px solid black;
+  padding: 8px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+input[type="datetime-local"],
+input[type="text"] {
+  width: calc(100% - 16px - 2px);
+}
+
+.until-label {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.loading-ratio {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.time-left {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.loading-background {
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.loading-bar {
+  background-color: black;
+  height: 10px;
+}

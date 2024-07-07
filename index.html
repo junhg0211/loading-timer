@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="./logo.svg" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"
+    />
+    <script src="timer.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <title>Loading Timer</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div id="time-insert" style="display: none" class="container">
+        <form action="?" method="GET">
+          <div class="input-label">시작 시간</div>
+          <input type="datetime-local" name="start-time" />
+          <div class="input-label">종료 시간</div>
+          <input type="datetime-local" name="end-time" />
+          <div class="input-label">목표</div>
+          <input type="text" name="description" />
+          <input type="submit" />
+        </form>
+      </div>
+      <div id="loading-timer" style="display: none" class="container">
+        <div>
+          <div class="until-label" id="until-label">
+            “<span id="description-span"></span>”까지
+          </div>
+          <div id="loading-ratio" class="loading-ratio"></div>
+          <div class="loading-background">
+            <div class="loading-bar" id="loading-bar"></div>
+          </div>
+          <div id="time-left" class="time-left"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
