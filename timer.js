@@ -37,10 +37,13 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(() => {
     const now = new Date().getTime();
     const time = now - startTime;
-    const percentage = Math.min(
-      100,
-      Math.round((time / duration) * Math.pow(10, trailing) * 100) /
-        Math.pow(10, trailing),
+    const percentage = Math.max(
+      0,
+      Math.min(
+        100,
+        Math.round((time / duration) * Math.pow(10, trailing) * 100) /
+          Math.pow(10, trailing),
+      ),
     ).toFixed(trailing);
 
     loadingBar.style.width = `${percentage}%`;
